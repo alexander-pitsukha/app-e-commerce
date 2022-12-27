@@ -85,6 +85,22 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.6.11</version>
         </dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<profiles>
@@ -125,7 +141,7 @@
 							<jdbcUser>${jdbcUser}</jdbcUser>
 							<jdbcPassword>${jdbcPassword}</jdbcPassword>
 							<vendor>hibernate</vendor>
-							<packageToScan>com.flatlogic.app.generator.entity</packageToScan>
+							<packageToScan>com.flatlogic.app.ecomerce.entity</packageToScan>
 							<scriptAction>create</scriptAction>
 							<format>true</format>
 							<!-- none, create, drop, drop-and-create, create-or-extend-tables -->
