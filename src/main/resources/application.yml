@@ -1,0 +1,94 @@
+backend:
+  host: http://localhost:${server.port}
+
+email:
+  from: support@flatlogic.com
+  verification:
+    token:
+      expiration:
+        hours: 3
+
+frontend:
+  host: http://localhost:3000
+
+jwt:
+  token:
+    expiration:
+      hours: 10
+
+logging:
+  file:
+    name: ${logging.file.path}/application.log
+    path: ./logs
+
+password:
+  reset:
+    token:
+      expiration:
+        hours: 3
+
+scheduled:
+  remove:
+    legacy:
+      files: 0 0 0 * * ?
+  reset:
+    email:
+      verify: 0 */6 * * * ?
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    driver-class-name: '@spring.datasource.driver-class-name@'
+    password: '@spring.datasource.password@'
+    url: '@spring.datasource.url@'
+    username: '@spring.datasource.username@'
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: '@spring.jpa.properties.hibernate.dialect@'
+        format_sql: false
+        hbm2ddl:
+          import_files: classpath:sql/import_users.sql
+        id:
+          new_generator_mappings: false
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    password: ''
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            auto: true
+            enable: true
+    username: support@flatlogic.com
+  messages:
+    always-use-message-format: false
+    basename: messages/message_en
+    cache-seconds: -1
+    encoding: UTF-8
+    fallback-to-system-locale: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 671001533244-kf1k1gmp6mnl0r030qmvdu6v36ghmim6.apps.googleusercontent.com
+            client-secret: Yo4qbKZniqvojzUQ60iKlxqR
+            redirectUri: '{baseUrl}/auth/signin/google/callback'
+  servlet:
+    multipart:
+      enabled: true
+      location: ./upload
+      max-file-size: 10MB
+      max-request-size: 10MB
