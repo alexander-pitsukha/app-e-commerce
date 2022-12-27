@@ -1,0 +1,22 @@
+{
+  "id": "3ea4c021-9879-4315-b61e-0aac16936732",
+  "createdAt": "2020-12-10T17:32:39.702",
+  "updatedAt": "2020-12-10T17:32:39.802",
+  "deletedAt": null,
+  "createdBy": {
+    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889",
+    "firstName": "Admin",
+    "lastName": null,
+    "phoneNumber": null,
+    "email": "admin@flatlogic.com"
+  },
+  "updatedBy": {
+    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889",
+    "firstName": "Admin",
+    "lastName": null,
+    "phoneNumber": null,
+    "email": "admin@flatlogic.com"
+  },
+  "title": "computers",
+  "importHash": null
+}
