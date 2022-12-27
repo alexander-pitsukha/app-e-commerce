@@ -1,7 +1,7 @@
 ### requirements:
 
-+ jdk 11 (or higher)
-+ maven 3.8.6 (or higher)
++ jdk 17 (or higher)
++ maven 3.9.14 (or higher)
 
 How to create database schema and run a local app, run following commands:
 
@@ -14,6 +14,7 @@ How to create database schema, import data in all tables and run a local app, ru
 
 * mvn clean compile -U -Pdev
 * mvn -Pdev jpa-schema:generate
+* mvn -Pdev sql:execute
 * mvn -Pdev sql:execute@import-data
 * mvn spring-boot:run
 
@@ -82,6 +83,7 @@ For changing database driver open pom.xml and change following properties
 * change following parameters in pom.xml for maven plugins as in for src/main/resources/application.properties
 
 for postgresql
+
 ```xml
 <jdbcDriver>org.postgresql.Driver</jdbcDriver>
 <jdbcUrl>jdbc:postgresql://localhost:5432/postgres</jdbcUrl>
@@ -89,13 +91,15 @@ for postgresql
 <jdbcPassword>postgres</jdbcPassword>
 <hibernateDialect>org.hibernate.dialect.PostgreSQL10Dialect</hibernateDialect>
 ```
+
 for mariadb
+
 ```xml
 <jdbcDriver>org.mariadb.jdbc.Driver/jdbcDriver>
-<jdbcUrl>jdbc:mariadb://localhost:3306/DB</jdbcUrl>
-<jdbcUser>root</jdbcUser>
-<jdbcPassword>root</jdbcPassword>
-<hibernateDialect>org.hibernate.dialect.MariaDB106Dialect</hibernateDialect>
+    <jdbcUrl>jdbc:mariadb://localhost:3306/DB</jdbcUrl>
+    <jdbcUser>root</jdbcUser>
+    <jdbcPassword>root</jdbcPassword>
+    <hibernateDialect>org.hibernate.dialect.MariaDB106Dialect</hibernateDialect>
 ```
 
 * rebuild and run an app
