@@ -1,0 +1,18 @@
+{
+  "firstName": "Admin",
+  "lastName": null,
+  "phoneNumber": null,
+  "email": "alex@flatlogic.com",
+  "role": "admin",
+  "disabled": false,
+  "password": "$2b$12$Dtk2u7HCtJydGeljMR5tEeKmVxrO8W0FNoSDXSSBoJHrNU3i9R4ca",
+  "emailVerified": true,
+  "emailVerificationToken": "090dde16-b259-4c11-876c-9ee25207b4f7",
+  "emailVerificationTokenExpiresAt": null,
+  "passwordResetToken": null,
+  "passwordResetTokenExpiresAt": null,
+  "provider": "local",
+  "importHash": null,
+  "products": [],
+  "files": []
+}

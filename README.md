@@ -1,7 +1,7 @@
 ### requirements:
 
-+ jdk 11 (or higher)
-+ maven 3.8.6 (or higher)
++ jdk 17 (or higher)
++ maven 3.9.14 (or higher)
 
 How to create database schema and run a local app, run following commands:
 
@@ -14,6 +14,7 @@ How to create database schema, import data in all tables and run a local app, ru
 
 * mvn clean compile -U -Pdev
 * mvn -Pdev jpa-schema:generate
+* mvn -Pdev sql:execute
 * mvn -Pdev sql:execute@import-data
 * mvn spring-boot:run
 
