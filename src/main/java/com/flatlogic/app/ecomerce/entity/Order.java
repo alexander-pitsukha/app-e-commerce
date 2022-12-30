@@ -38,7 +38,7 @@ public class Order extends AbstractEntity<UUID> {
     private Product product;
 
     @ManyToOne
-    @JoinColumn(name = "`userId`", nullable = false)
+    @JoinColumn(name = "`userId`")
     private User user;
 
 }
