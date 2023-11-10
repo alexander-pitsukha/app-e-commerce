@@ -31,7 +31,8 @@ public class GoogleOAuth2AuthenticationSuccessHandler extends SimpleUrlAuthentic
     }
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+                                        Authentication authentication) throws IOException {
         if (response.isCommitted()) {
             return;
         }
