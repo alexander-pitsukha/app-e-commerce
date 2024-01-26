@@ -1,0 +1,54 @@
+{
+  "id": "6b2d3137-6edd-4201-a1c3-0624df6f704a",
+  "createdAt": "2020-12-10T17:34:54.11",
+  "updatedAt": null,
+  "deletedAt": null,
+        "createdBy": {
+        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+      },
+  "updatedBy": null,
+  "title": "product2",
+  "price": 100.00,
+  "discount": 10.00,
+  "description": "desc",
+  "rating": 2,
+  "status": "out of stock",
+  "importHash": null,
+  "categories": [
+    {
+      "id": "d160a5fe-1224-43f4-a05f-cbc60e97f2d5",
+      "createdAt": "2020-12-10T17:32:23.846",
+      "updatedAt": null,
+      "deletedAt": null,
+            "createdBy": {
+        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+      },
+      "updatedBy": null,
+      "title": "cars",
+      "importHash": null
+    }
+  ],
+  "more_products": [
+    {
+      "id": "0f5a5c45-9a75-42a5-986a-4be6fbf5a3d4",
+      "createdAt": "2020-12-10T17:34:23.75",
+      "updatedAt": null,
+      "deletedAt": null,
+            "createdBy": {
+        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+      },
+      "updatedBy": null,
+      "title": "product1",
+      "price": 100.00,
+      "discount": 10.00,
+      "description": "description",
+      "rating": 2,
+      "status": "in stock",
+      "importHash": null,
+      "categories": [],
+      "more_products": [],
+      "image": []
+    }
+  ],
+  "image": []
+}

@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "id": "127b7b84-5af0-4e66-93ca-346ac35e1bdd",
+      "createdAt": "2020-12-10T17:33:50.152",
+      "updatedAt": null,
+      "deletedAt": null,
+            "createdBy": {
+        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+      },
+      "updatedBy": null,
+      "firstName": "Alex",
+      "lastName": "Xela",
+      "phoneNumber": "+888888888888",
+      "email": "user@flatlogic.com",
+      "role": "user",
+      "disabled": false,
+      "password": null,
+      "emailVerified": false,
+      "emailVerificationToken": null,
+      "emailVerificationTokenExpiresAt": null,
+      "passwordResetToken": null,
+      "passwordResetTokenExpiresAt": null,
+      "provider": null,
+      "importHash": null,
+      "wishlist": [],
+      "avatar": []
+    },
+    {
+      "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889",
+      "createdAt": "2020-11-17T14:32:23.553",
+      "updatedAt": "2020-11-17T14:32:23.553",
+      "deletedAt": null,
+      "createdBy": null,
+      "updatedBy": null,
+      "firstName": "Admin",
+      "lastName": null,
+      "phoneNumber": null,
+      "email": "admin@flatlogic.com",
+      "role": "admin",
+      "disabled": false,
+      "password": "$2b$12$Dtk2u7HCtJydGeljMR5tEeKmVxrO8W0FNoSDXSSBoJHrNU3i9R4ca",
+      "emailVerified": true,
+      "emailVerificationToken": null,
+      "emailVerificationTokenExpiresAt": null,
+      "passwordResetToken": null,
+      "passwordResetTokenExpiresAt": null,
+      "provider": "local",
+      "importHash": null,
+      "wishlist": [],
+      "avatar": []
+    }
+  ],
+  "count": 2
+}

@@ -18,7 +18,7 @@ public class TestAppConfiguration {
     public ObjectMapper objectMapper() {
         JavaTimeModule javaTimeModule = new JavaTimeModule();
         LocalDateTimeDeserializer localDateTimeDeserializer = new LocalDateTimeDeserializer(DateTimeFormatter
-                .ofPattern("yyyy-MM-dd HH:mm:ss"));
+                .ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS"));
         javaTimeModule.addDeserializer(LocalDateTime.class, localDateTimeDeserializer);
         return Jackson2ObjectMapperBuilder.json().modules(javaTimeModule)
                 .featuresToDisable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS).build();
