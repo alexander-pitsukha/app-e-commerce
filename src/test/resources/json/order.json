@@ -1,12 +1,14 @@
 {
   "id": "6d2dd84a-f17f-4be8-8cb1-255aa88342c3",
   "createdAt": "2020-12-10T17:35:30.893",
-  "updatedAt": null,
+  "updatedAt": "2020-12-10T17:35:31.893",
   "deletedAt": null,
   "createdBy": {
     "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
   },
-  "updatedBy": null,
+  "updatedBy": {
+    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+  },
   "amount": 20,
   "status": "bought",
   "importHash": null,
@@ -15,7 +17,7 @@
   "order_date": "2020-12-17T00:00:00",
   "product": {
     "id": "6b2d3137-6edd-4201-a1c3-0624df6f704a",
-    "createdAt": "2020-12-10T17:34:54.11",
+    "createdAt": "2020-12-10T17:34:54.855",
     "updatedAt": null,
     "deletedAt": null,
     "createdBy": {

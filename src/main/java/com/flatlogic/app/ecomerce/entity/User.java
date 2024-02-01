@@ -19,13 +19,12 @@ import javax.persistence.Table;
 import java.util.ArrayList;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "users")
-public class User extends AbstractEntity<UUID> {
+public class User extends AbstractAuditable {
 
     @Column(name = "`firstName`", columnDefinition = "text")
     private String firstName;

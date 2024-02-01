@@ -12,13 +12,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "orders")
-public class Order extends AbstractEntity<UUID> {
+public class Order extends AbstractAuditable {
 
     @Column(name = "order_date")
     private LocalDateTime orderDate;

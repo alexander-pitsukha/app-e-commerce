@@ -1,12 +1,14 @@
 {
   "id": "6b2d3137-6edd-4201-a1c3-0624df6f704a",
-  "createdAt": "2020-12-10T17:34:54.11",
-  "updatedAt": null,
+  "createdAt": "2020-12-10T17:34:54.456",
+  "updatedAt": "2020-12-11T17:34:54.456",
   "deletedAt": null,
-        "createdBy": {
-        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
-      },
-  "updatedBy": null,
+  "createdBy": {
+    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+  },
+  "updatedBy": {
+    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+  },
   "title": "product2",
   "price": 100.00,
   "discount": 10.00,
@@ -20,7 +22,7 @@
       "createdAt": "2020-12-10T17:32:23.846",
       "updatedAt": null,
       "deletedAt": null,
-            "createdBy": {
+      "createdBy": {
         "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
       },
       "updatedBy": null,
@@ -28,13 +30,13 @@
       "importHash": null
     }
   ],
-  "more_products": [
+  "products": [
     {
       "id": "0f5a5c45-9a75-42a5-986a-4be6fbf5a3d4",
-      "createdAt": "2020-12-10T17:34:23.75",
+      "createdAt": "2020-12-10T17:34:23.754",
       "updatedAt": null,
       "deletedAt": null,
-            "createdBy": {
+      "createdBy": {
         "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
       },
       "updatedBy": null,
@@ -50,5 +52,25 @@
       "image": []
     }
   ],
-  "image": []
+  "files": [
+    {
+      "id": "94951ce1-1044-4b23-8e4e-23aeedf03787",
+      "createdAt": "2020-12-10T17:34:54.693",
+      "deletedAt": null,
+      "updatedAt": "2020-12-11T17:34:54.693",
+      "belongsTo": "users",
+      "belongsToColumn": "avatar-column",
+      "belongsToId": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889",
+      "name": "Screenshot_20221229_104032.png",
+      "privateUrl": "users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png",
+      "publicUrl": "http://localhost:8080/api/file/download?privateUrl=users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png",
+      "sizeInBytes": 114563,
+      "createdBy": {
+        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+      },
+      "updatedBy": {
+        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+      }
+    }
+  ]
 }

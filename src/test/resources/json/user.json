@@ -3,8 +3,12 @@
   "createdAt": "2020-11-17T14:32:23.553",
   "updatedAt": "2020-11-17T14:32:23.553",
   "deletedAt": null,
-  "createdBy": null,
-  "updatedBy": null,
+  "createdBy": {
+    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+  },
+  "updatedBy": {
+    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+  },
   "firstName": "Admin",
   "lastName": null,
   "phoneNumber": null,
@@ -19,6 +23,6 @@
   "passwordResetTokenExpiresAt": null,
   "provider": "local",
   "importHash": null,
-  "wishlist": [],
-  "avatar": []
+  "products": [],
+  "files": []
 }

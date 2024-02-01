@@ -19,13 +19,12 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "products")
-public class Product extends AbstractEntity<UUID> {
+public class Product extends AbstractAuditable {
 
     @Column(name = "title", columnDefinition = "text")
     private String title;

@@ -5,7 +5,7 @@
       "createdAt": "2020-12-10T17:34:54.11",
       "updatedAt": null,
       "deletedAt": null,
-            "createdBy": {
+      "createdBy": {
         "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
       },
       "updatedBy": null,
@@ -22,9 +22,9 @@
           "createdAt": "2020-12-10T17:32:23.846",
           "updatedAt": null,
           "deletedAt": null,
-                "createdBy": {
-        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
-      },
+          "createdBy": {
+            "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+          },
           "updatedBy": null,
           "title": "cars",
           "importHash": null
@@ -36,9 +36,9 @@
           "createdAt": "2020-12-10T17:34:23.75",
           "updatedAt": null,
           "deletedAt": null,
-                "createdBy": {
-        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
-      },
+          "createdBy": {
+            "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+          },
           "updatedBy": null,
           "title": "product1",
           "price": 100.00,
@@ -59,7 +59,7 @@
       "createdAt": "2020-12-10T17:34:23.75",
       "updatedAt": null,
       "deletedAt": null,
-            "createdBy": {
+      "createdBy": {
         "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
       },
       "updatedBy": null,
@@ -76,9 +76,9 @@
           "createdAt": "2020-12-10T17:32:23.846",
           "updatedAt": null,
           "deletedAt": null,
-                "createdBy": {
-        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
-      },
+          "createdBy": {
+            "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+          },
           "updatedBy": null,
           "title": "cars",
           "importHash": null
@@ -88,9 +88,9 @@
           "createdAt": "2020-12-10T17:32:39.702",
           "updatedAt": null,
           "deletedAt": null,
-                "createdBy": {
-        "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
-      },
+          "createdBy": {
+            "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
+          },
           "updatedBy": null,
           "title": "computers",
           "importHash": null

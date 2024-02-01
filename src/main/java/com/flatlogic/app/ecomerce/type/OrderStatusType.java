@@ -1,5 +1,6 @@
 package com.flatlogic.app.ecomerce.type;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -9,7 +10,8 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public enum OrderStatusType {
 
-    IN_CART("in cart"), BOUGHT("bought");
+    @JsonProperty("in cart") IN_CART("in cart"),
+    @JsonProperty("bought") BOUGHT("bought");
 
     private final String status;
 

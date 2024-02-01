@@ -28,7 +28,7 @@ class CategoryToDtoConverterTests extends AbstractTests {
             return new CategoryToDtoConverter();
         }
     }
-    
+
     @Test
     void testConvert() throws IOException {
         Category category = getObjectFromJson("json/category.json", Category.class);
@@ -37,6 +37,7 @@ class CategoryToDtoConverterTests extends AbstractTests {
 
         assertNotNull(categoryDto);
         assertNotNull(categoryDto.getId());
+
         assertEquals(category.getId(), categoryDto.getId());
         assertEquals(category.getTitle(), categoryDto.getTitle());
         assertEquals(category.getImportHash(), categoryDto.getImportHash());

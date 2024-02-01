@@ -13,7 +13,7 @@ import java.util.UUID;
 @Setter
 @Entity
 @Table(name = "files")
-public class File extends AbstractEntity<UUID> {
+public class File extends AbstractAuditable {
 
     @Column(name = "`belongsTo`")
     private String belongsTo;

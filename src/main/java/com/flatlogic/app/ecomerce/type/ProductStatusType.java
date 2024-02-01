@@ -1,5 +1,6 @@
 package com.flatlogic.app.ecomerce.type;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -9,7 +10,8 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public enum ProductStatusType {
 
-    IN_STOCK("in stock"), OUT_OF_STOCK("out of stock");
+    @JsonProperty("in stock") IN_STOCK("in stock"),
+    @JsonProperty("out of stock") OUT_OF_STOCK("out of stock");
 
     private final String status;
 

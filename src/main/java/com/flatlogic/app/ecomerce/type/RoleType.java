@@ -1,5 +1,6 @@
 package com.flatlogic.app.ecomerce.type;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -10,7 +11,8 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public enum RoleType implements GrantedAuthority {
 
-    USER("user"), ADMIN("admin");
+    @JsonProperty("user") USER("user"),
+    @JsonProperty("admin") ADMIN("admin");
 
     private final String authority;
 
