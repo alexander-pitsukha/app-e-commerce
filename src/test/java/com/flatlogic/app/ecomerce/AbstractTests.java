@@ -1,5 +1,6 @@
 package com.flatlogic.app.ecomerce;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.flatlogic.app.ecomerce.configuration.TestAppConfiguration;
 import lombok.Getter;
@@ -18,6 +19,10 @@ public abstract class AbstractTests {
 
     public <T> T getObjectFromJson(String fileSource, Class<T> valueType) throws java.io.IOException {
         return objectMapper.readValue(new ClassPathResource(fileSource).getInputStream(), valueType);
+    }
+
+    public <T> T getObjectFromJson(String fileSource, TypeReference<T> valueTypeRef) throws java.io.IOException {
+        return objectMapper.readValue(new ClassPathResource(fileSource).getInputStream(), valueTypeRef);
     }
 
 }
