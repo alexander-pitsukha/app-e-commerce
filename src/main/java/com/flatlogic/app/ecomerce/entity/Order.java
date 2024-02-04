@@ -33,7 +33,7 @@ public class Order extends AbstractAuditable {
     private String importHash;
 
     @ManyToOne
-    @JoinColumn(name = "`productId`", nullable = false)
+    @JoinColumn(name = "`productId`")
     private Product product;
 
     @ManyToOne
