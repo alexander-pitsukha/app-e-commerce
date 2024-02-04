@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -24,6 +25,9 @@ class UserRepositoryTests extends AbstractRepositoryTests {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private TestEntityManager entityManager;
 
     @Test
     void testFindAllByDeletedAtIsNullPage() {
@@ -102,7 +106,7 @@ class UserRepositoryTests extends AbstractRepositoryTests {
         String emailVerificationToken = "37F1FE9C2C574A5CB2CB16FE2FC705C4";
 
         userRepository.updateEmailVerificationToken(emailVerificationToken);
-        User user = userRepository.getById(UUID.fromString("12740c3d-2788-4401-af6c-b869ec4a4639"));
+        User user = entityManager.find(User.class, UUID.fromString("12740c3d-2788-4401-af6c-b869ec4a4639"));
 
         assertNotNull(user.getId());
         assertEquals(true, user.getEmailVerified());
@@ -116,7 +120,7 @@ class UserRepositoryTests extends AbstractRepositoryTests {
         String email = "user1@flatlogic.com";
 
         userRepository.updatePasswordResetToken(passwordResetToken, LocalDateTime.now(), email);
-        User user = userRepository.getById(UUID.fromString("12740c3d-2788-4401-af6c-b869ec4a4639"));
+        User user = entityManager.find(User.class, UUID.fromString("12740c3d-2788-4401-af6c-b869ec4a4639"));
 
         assertNotNull(user.getId());
         assertEquals(passwordResetToken, user.getPasswordResetToken());
@@ -128,7 +132,7 @@ class UserRepositoryTests extends AbstractRepositoryTests {
         UUID id = UUID.fromString("12740c3d-2788-4401-af6c-b869ec4a4639");
 
         userRepository.updateDeletedAt(id, LocalDateTime.now());
-        User user = userRepository.getById(id);
+        User user = entityManager.find(User.class, id);
 
         assertNotNull(user.getId());
         assertNotNull(user.getDeletedAt());

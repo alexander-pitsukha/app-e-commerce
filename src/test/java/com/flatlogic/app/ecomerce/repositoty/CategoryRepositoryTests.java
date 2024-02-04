@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -25,6 +26,9 @@ class CategoryRepositoryTests extends AbstractRepositoryTests {
 
     @Autowired
     private CategoryRepository categoryRepository;
+
+    @Autowired
+    private TestEntityManager entityManager;
 
     @Test
     void testFindAllByDeletedAtIsNullPage() {
@@ -55,7 +59,7 @@ class CategoryRepositoryTests extends AbstractRepositoryTests {
         UUID id = UUID.fromString("d160a5fe-1224-43f4-a05f-cbc60e97f2d5");
 
         categoryRepository.updateDeletedAt(id, LocalDateTime.now());
-        Category category = categoryRepository.getById(id);
+        Category category = entityManager.find(Category.class, id);
 
         assertNotNull(category.getId());
         assertNotNull(category.getDeletedAt());
