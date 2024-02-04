@@ -221,7 +221,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void updateUserPasswordResetTokenAndSendEmail(final String email) {
         var token = UUID.randomUUID();
-        javaMailService.sendEmailForUpdateUserPasswordResetTokenAnd(email, token);
+        javaMailService.sendEmailForUpdateUserPasswordResetToken(email, token);
         userRepository.updatePasswordResetToken(token.toString(), LocalDateTime.now(), email);
     }
 

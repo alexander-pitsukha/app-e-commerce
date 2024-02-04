@@ -60,7 +60,7 @@ public class JavaMailServiceImpl implements JavaMailService {
     }
 
     @Override
-    public void sendEmailForUpdateUserPasswordResetTokenAnd(final String email, final UUID token) {
+    public void sendEmailForUpdateUserPasswordResetToken(final String email, final UUID token) {
         var message = javaMailSender.createMimeMessage();
         try {
             var helper = new MimeMessageHelper(message, true, StandardCharsets.UTF_8.name());

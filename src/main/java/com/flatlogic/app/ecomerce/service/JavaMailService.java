@@ -6,6 +6,6 @@ public interface JavaMailService {
 
     void sendEmailForCreateUser(String email, UUID token);
 
-    void sendEmailForUpdateUserPasswordResetTokenAnd(String email, UUID token);
+    void sendEmailForUpdateUserPasswordResetToken(String email, UUID token);
 
 }
