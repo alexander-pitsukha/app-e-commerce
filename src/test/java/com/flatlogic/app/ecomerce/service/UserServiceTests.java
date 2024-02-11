@@ -11,6 +11,7 @@ import com.flatlogic.app.ecomerce.util.Constants;
 import com.flatlogic.app.ecomerce.util.MessageCodeUtil;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.function.Executable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -114,10 +115,10 @@ class UserServiceTests extends AbstractServiceTests {
         user.setEmailVerificationTokenExpiresAt(LocalDateTime.now().minusYears(1));
         userRepository.save(user);
 
-        ValidationException exception = assertThrows(ValidationException.class,
-                () -> userService.updateEmailVerification(user.getEmailVerificationToken()));
-        assertEquals(messageCodeUtil.getFullErrorMessageByBundleCode(
-                Constants.ERROR_MSG_USER_EMAIL_VERIFICATION_RESET_OR_EXPIRED), exception.getMessage());
+        Executable executable = () -> userService.updateEmailVerification(user.getEmailVerificationToken());
+
+        assertThrows(ValidationException.class, executable, messageCodeUtil
+                .getFullErrorMessageByBundleCode(Constants.ERROR_MSG_USER_EMAIL_VERIFICATION_RESET_OR_EXPIRED));
     }
 
     @Test
