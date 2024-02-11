@@ -9,6 +9,6 @@ import java.lang.annotation.RetentionPolicy;
 @WithSecurityContext(factory = WithUserDetailsSecurityContextFactory.class)
 public @interface WithCustomUserDetails {
 
-    String username() default "admin@test.com";
+    String username() default "admin@flatlogic.com";
 
 }

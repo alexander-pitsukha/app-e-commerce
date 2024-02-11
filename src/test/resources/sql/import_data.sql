@@ -1,7 +1,7 @@
 INSERT INTO users
     (id,"createdAt","deletedAt","updatedAt",disabled,email,"emailVerificationToken","emailVerificationTokenExpiresAt","emailVerified","firstName","importHash","lastName",password,"passwordResetToken","passwordResetTokenExpiresAt","phoneNumber",provider,role,"createdById","updatedById")
 VALUES
-    ('52BC1FB60FE546478CBC8C55E156B889','2020-11-17 14:32:23.553',NULL,'2020-11-17 14:32:23.553',false,'admin@flatlogic.com',NULL,NULL,true,'Admin',NULL,NULL,'$2b$12$Dtk2u7HCtJydGeljMR5tEeKmVxrO8W0FNoSDXSSBoJHrNU3i9R4ca',NULL,NULL,NULL,'local','ADMIN',NULL,NULL),
+    ('52BC1FB60FE546478CBC8C55E156B889','2020-11-17 14:32:23.553',NULL,'2020-11-17 14:32:23.553',false,'admin@flatlogic.com',NULL,NULL,true,'Admin',NULL,NULL,'$2b$12$Dtk2u7HCtJydGeljMR5tEeKmVxrO8W0FNoSDXSSBoJHrNU3i9R4ca',NULL,NULL,NULL,'local','ADMIN','52BC1FB60FE546478CBC8C55E156B889',NULL),
     ('127B7B845AF04E6693CA346AC35E1BDD','2020-12-10 17:33:50.152',NULL,NULL,false,'user@flatlogic.com',NULL,NULL,false,'Alex',NULL,'Xela',NULL,NULL,NULL,'+888888888888',NULL,'USER','52BC1FB60FE546478CBC8C55E156B889',NULL),
     ('12740C3D27884401AF6CB869EC4A4639','2020-12-11 17:33:50.152',NULL,NULL,false,'user1@flatlogic.com','37F1FE9C2C574A5CB2CB16FE2FC705C4','2020-12-10 00:00:00',false,'Alexa',NULL,'Alexa','$2b$12$Dtk2u7HCtJydGeljMR5tEeKmVxrO8W0FNoSDXSSBoJHrNU3i9R4ca','E04715B3A09B4E0B8D72697B1855EB82',NULL,'+999999999999',NULL,'USER','52BC1FB60FE546478CBC8C55E156B889',NULL);
 
@@ -40,4 +40,5 @@ VALUES
 INSERT INTO files
     (id, "createdAt", "deletedAt", "updatedAt", "belongsTo", "belongsToColumn", "belongsToId", name, "privateUrl", "publicUrl", "sizeInBytes", "createdById", "updatedById")
 VALUES
-    ('94951CE110444B238E4E23AEEDF03787', '2022-12-30 09:25:30.693', NULL, NULL, 'users', 'avatar', '52BC1FB60FE546478CBC8C55E156B889', 'Screenshot_20221229_104032.png', 'users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png', 'http://localhost:8080/api/file/download?privateUrl=users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png', 114563, '52BC1FB60FE546478CBC8C55E156B889', NULL);
+    ('94951CE110444B238E4E23AEEDF03787', '2022-12-30 09:25:30.693', NULL, NULL, 'users', 'avatar', '52BC1FB60FE546478CBC8C55E156B889', 'Screenshot_20221229_104032.png', 'users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png', 'http://localhost:8080/api/file/download?privateUrl=users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png', 114563, '52BC1FB60FE546478CBC8C55E156B889', NULL),
+    ('D05258B0C3D645ED8E75C1CBCBC805A3', '2022-12-30 09:25:30.693', NULL, NULL, 'products', 'avatar', '6B2D31376EDD4201A1C30624DF6F704A', 'Screenshot_20221229_104032.png', 'users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png', 'http://localhost:8080/api/file/download?privateUrl=users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png', 114563, '52BC1FB60FE546478CBC8C55E156B889', NULL);

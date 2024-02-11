@@ -25,28 +25,28 @@ class CategoryServiceTests extends AbstractServiceTests {
     private CategoryService categoryService;
 
     @Test
-    void testGetCategoriesParamsIsNull() {
+    void testGetCategoriesThreeParamsIsNull() {
         List<Category> categories = categoryService.getCategories(null, null, null);
 
         assertEquals(4, categories.size());
     }
 
     @Test
-    void testGetCategoriesParamsIsNotNull() {
+    void testGetCategoriesThreeParamsIsNotNull() {
         List<Category> categories = categoryService.getCategories(1, 2, "title_DESC");
 
         assertEquals(2, categories.size());
     }
 
     @Test
-    void testGetCategoriesIsNull() {
+    void testGetCategoriesTwoParamsIsNull() {
         List<Category> categories = categoryService.getCategories(null, 2);
 
         assertEquals(2, categories.size());
     }
 
     @Test
-    void testGetCategoriesIsNotNull() {
+    void testGetCategoriesTwoParamsIsNotNull() {
         List<Category> categories = categoryService.getCategories("t", 2);
 
         assertEquals(1, categories.size());

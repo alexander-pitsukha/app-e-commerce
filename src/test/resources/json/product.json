@@ -54,13 +54,13 @@
   ],
   "files": [
     {
-      "id": "94951ce1-1044-4b23-8e4e-23aeedf03787",
+      "id": "d05258b0-c3d6-45ed-8e75-c1cbcbc805a3",
       "createdAt": "2020-12-10T17:34:54.693",
       "deletedAt": null,
       "updatedAt": "2020-12-11T17:34:54.693",
-      "belongsTo": "users",
+      "belongsTo": "products",
       "belongsToColumn": "avatar-column",
-      "belongsToId": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889",
+      "belongsToId": "d17a60f7-0e63-4694-bb2d-93a15b2a3533",
       "name": "Screenshot_20221229_104032.png",
       "privateUrl": "users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png",
       "publicUrl": "http://localhost:8080/api/file/download?privateUrl=users/avatar/58ae5c09-a337-41c0-acf2-07073041247a.png",

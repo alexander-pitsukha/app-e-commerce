@@ -34,7 +34,7 @@ class UserToDtoConverterTests extends AbstractTests {
 
     @Test
     void testConvert() throws IOException {
-        User user = getObjectFromJson("json/user.json", User.class);
+        User user = getObjectFromJson("json/user_1.json", User.class);
 
         UserDto userDto = converter.convert(user);
 

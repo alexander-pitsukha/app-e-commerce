@@ -1,5 +1,4 @@
-{
-  "rows": [
+[
     {
       "id": "3ea4c021-9879-4315-b61e-0aac16936732",
       "createdAt": "2020-12-10T17:32:39.702",
@@ -48,6 +47,4 @@
       "title": "cars",
       "importHash": null
     }
-  ],
-  "count": 4
-}
+]

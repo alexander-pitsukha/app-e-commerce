@@ -20,7 +20,7 @@ public abstract class AbstractAuditable extends AbstractIdentifiable<UUID> {
 
     @CreatedBy
     @ManyToOne
-    @JoinColumn(name = "`createdById`", updatable = false)
+    @JoinColumn(name = "`createdById`", nullable = false, updatable = false)
     private User createdBy;
 
     @CreatedDate

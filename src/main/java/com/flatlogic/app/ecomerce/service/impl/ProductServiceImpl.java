@@ -176,7 +176,7 @@ public class ProductServiceImpl implements ProductService {
             Map<UUID, File> mapFiles = files.stream().collect(Collectors.toMap(File::getId, file -> file));
             files.clear();
             fileRequests.forEach(fileRequest -> {
-                File file = null;
+                File file;
                 if (fileRequest.isNew()) {
                     file = new File();
                     file.setBelongsTo(BelongsToType.PRODUCTS.getType());

@@ -1,23 +1,13 @@
 {
-  "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889",
-  "createdAt": "2020-11-17T14:32:23.553",
-  "updatedAt": "2020-11-17T14:32:23.553",
-  "deletedAt": null,
-  "createdBy": {
-    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
-  },
-  "updatedBy": {
-    "id": "52bc1fb6-0fe5-4647-8cbc-8c55e156b889"
-  },
   "firstName": "Admin",
   "lastName": null,
   "phoneNumber": null,
-  "email": "admin@flatlogic.com",
+  "email": "alex@flatlogic.com",
   "role": "admin",
   "disabled": false,
   "password": "$2b$12$Dtk2u7HCtJydGeljMR5tEeKmVxrO8W0FNoSDXSSBoJHrNU3i9R4ca",
   "emailVerified": true,
-  "emailVerificationToken": null,
+  "emailVerificationToken": "090dde16-b259-4c11-876c-9ee25207b4f7",
   "emailVerificationTokenExpiresAt": null,
   "passwordResetToken": null,
   "passwordResetTokenExpiresAt": null,

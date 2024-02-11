@@ -176,7 +176,7 @@ public class UserServiceImpl implements UserService {
                     Constants.ERROR_MSG_USER_EMAIL_VERIFICATION_RESET_OR_EXPIRED));
         }
         userRepository.updateEmailVerificationToken(token);
-        return user;
+        return userRepository.findById(user.getId()).orElseThrow();
     }
 
     /**
@@ -332,7 +332,7 @@ public class UserServiceImpl implements UserService {
             Map<UUID, File> mapFiles = files.stream().collect(Collectors.toMap(File::getId, file -> file));
             files.clear();
             fileRequests.forEach(fileRequest -> {
-                File file = null;
+                File file;
                 if (fileRequest.isNew()) {
                     file = new File();
                     file.setBelongsTo(BelongsToType.USERS.getType());
