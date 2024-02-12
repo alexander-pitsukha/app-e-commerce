@@ -19,7 +19,7 @@ import java.util.UUID;
 public abstract class AbstractAuditable extends AbstractIdentifiable<UUID> {
 
     @CreatedBy
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "`createdById`", nullable = false, updatable = false)
     private User createdBy;
 
@@ -28,7 +28,7 @@ public abstract class AbstractAuditable extends AbstractIdentifiable<UUID> {
     private LocalDateTime createdAt;
 
     @LastModifiedBy
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "`updatedById`", insertable = false)
     private User updatedBy;
 

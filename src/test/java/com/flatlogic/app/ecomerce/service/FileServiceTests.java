@@ -22,6 +22,7 @@ class FileServiceTests extends AbstractServiceTests {
     void testUploadProductsFile() {
     }
 
+    @Test
     void testUploadUsersFile() {
     }
 
