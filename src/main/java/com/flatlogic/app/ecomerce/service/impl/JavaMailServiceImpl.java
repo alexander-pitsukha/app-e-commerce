@@ -22,8 +22,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class JavaMailServiceImpl implements JavaMailService {
 
-    private static final String APPLICATION = "Application";
-
     private final JavaMailSender javaMailSender;
     private final MessageCodeUtil messageCodeUtil;
 
