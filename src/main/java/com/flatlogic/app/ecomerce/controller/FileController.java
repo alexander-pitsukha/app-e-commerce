@@ -55,7 +55,7 @@ public class FileController {
     /**
      * Upload products file.
      *
-     * @param file   MultipartRequest
+     * @param multipartRequest   MultipartRequest
      * @param result BindingResult
      * @return Void
      */
@@ -66,12 +66,12 @@ public class FileController {
             @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content),
             @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content)})
     @PostMapping("upload/products/image")
-    public ResponseEntity<HttpStatus> uploadProductsFile(@Validated MultipartRequest file, BindingResult result) {
+    public ResponseEntity<HttpStatus> uploadProductsFile(@Validated MultipartRequest multipartRequest, BindingResult result) {
         log.info("Upload products file.");
         if (result.hasErrors()) {
             return ResponseEntity.badRequest().build();
         } else {
-            fileService.uploadProductsFile(file.getFile(), file.getFilename());
+            fileService.uploadProductsFile(multipartRequest.getFile(), multipartRequest.getFilename());
             return ResponseEntity.noContent().build();
         }
     }
@@ -79,7 +79,7 @@ public class FileController {
     /**
      * Upload users file.
      *
-     * @param file   MultipartRequest
+     * @param multipartRequest   MultipartRequest
      * @param result BindingResult
      * @return Void
      */
@@ -90,12 +90,12 @@ public class FileController {
             @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content),
             @ApiResponse(responseCode = "403", description = "Forbidden", content = @Content)})
     @PostMapping("upload/users/avatar")
-    public ResponseEntity<HttpStatus> uploadUsersFile(@Validated MultipartRequest file, BindingResult result) {
+    public ResponseEntity<HttpStatus> uploadUsersFile(@Validated MultipartRequest multipartRequest, BindingResult result) {
         log.info("Upload users file.");
         if (result.hasErrors()) {
             return ResponseEntity.badRequest().build();
         } else {
-            fileService.uploadUsersFile(file.getFile(), file.getFilename());
+            fileService.uploadUsersFile(multipartRequest.getFile(), multipartRequest.getFilename());
             return ResponseEntity.noContent().build();
         }
     }
