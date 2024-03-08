@@ -5,6 +5,7 @@ import com.flatlogic.app.ecomerce.AppECommerceApplication;
 import com.flatlogic.app.ecomerce.controller.request.ProductRequest;
 import com.flatlogic.app.ecomerce.controller.request.RequestData;
 import com.flatlogic.app.ecomerce.entity.Product;
+import com.flatlogic.app.ecomerce.util.WithCustomUserDetails;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,7 @@ class ProductServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testSaveProduct() throws IOException {
         RequestData<ProductRequest> requestData = getObjectFromJson("json/product_request.json", new TypeReference<>() {
         });
@@ -82,6 +84,7 @@ class ProductServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testUpdateProduct() throws IOException {
         RequestData<ProductRequest> requestData = getObjectFromJson("json/product_request.json", new TypeReference<>() {
         });

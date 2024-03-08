@@ -5,6 +5,7 @@ import com.flatlogic.app.ecomerce.AppECommerceApplication;
 import com.flatlogic.app.ecomerce.controller.request.OrderRequest;
 import com.flatlogic.app.ecomerce.controller.request.RequestData;
 import com.flatlogic.app.ecomerce.entity.Order;
+import com.flatlogic.app.ecomerce.util.WithCustomUserDetails;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,7 @@ class OrderServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testSaveOrder() throws IOException {
         RequestData<OrderRequest> requestData = getObjectFromJson("json/order_request.json", new TypeReference<>() {
         });

@@ -9,6 +9,7 @@ import com.flatlogic.app.ecomerce.exception.ValidationException;
 import com.flatlogic.app.ecomerce.repository.UserRepository;
 import com.flatlogic.app.ecomerce.util.Constants;
 import com.flatlogic.app.ecomerce.util.MessageCodeUtil;
+import com.flatlogic.app.ecomerce.util.WithCustomUserDetails;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.function.Executable;
@@ -87,6 +88,7 @@ class UserServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testCreateUserAndSendEmail() {
         doNothing().when(javaMailService).sendEmailForCreateUser(anyString(), any(UUID.class));
 
@@ -98,6 +100,7 @@ class UserServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testUpdateEmailVerification() throws IOException {
         User user = getObjectFromJson("/json/user_2.json", User.class);
         user.setEmailVerificationTokenExpiresAt(LocalDateTime.now());
@@ -110,6 +113,7 @@ class UserServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testUpdateEmailVerificationException() throws IOException {
         User user = getObjectFromJson("/json/user_2.json", User.class);
         user.setEmailVerificationTokenExpiresAt(LocalDateTime.now().minusYears(1));
@@ -122,6 +126,7 @@ class UserServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testSaveUser() throws IOException {
         RequestData<UserRequest> requestData = getObjectFromJson("json/user_request_1.json", new TypeReference<>() {
         });
@@ -150,6 +155,7 @@ class UserServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testUpdateUser() throws IOException {
         RequestData<UserRequest> requestData = getObjectFromJson("json/user_request_2.json", new TypeReference<>() {
         });

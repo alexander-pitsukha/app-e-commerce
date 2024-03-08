@@ -35,7 +35,7 @@ abstract class BasicControllerTests extends AbstractTests {
     private UserDetailsService userDetailsService;
 
     @MockBean
-    private JwtTokenUtil jwtTokenUtil;
+    protected JwtTokenUtil jwtTokenUtil;
 
     void setUp() throws Exception {
         User user = getObjectFromJson("json/user_1.json", User.class);

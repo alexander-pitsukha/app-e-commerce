@@ -5,6 +5,7 @@ import com.flatlogic.app.ecomerce.AppECommerceApplication;
 import com.flatlogic.app.ecomerce.controller.request.CategoryRequest;
 import com.flatlogic.app.ecomerce.controller.request.RequestData;
 import com.flatlogic.app.ecomerce.entity.Category;
+import com.flatlogic.app.ecomerce.util.WithCustomUserDetails;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +61,7 @@ class CategoryServiceTests extends AbstractServiceTests {
     }
 
     @Test
+    @WithCustomUserDetails
     void testSaveCategory() throws IOException {
         RequestData<CategoryRequest> requestData = getObjectFromJson("json/category_request.json", new TypeReference<>() {
         });
