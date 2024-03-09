@@ -1,13 +1,15 @@
 package com.flatlogic.app.ecomerce.service;
 
-import com.flatlogic.app.ecomerce.AppECommerceApplication;
+import com.flatlogic.app.ecomerce.AbstractTests;
+import com.flatlogic.app.ecomerce.service.impl.JavaMailServiceImpl;
 import com.flatlogic.app.ecomerce.util.Constants;
 import com.flatlogic.app.ecomerce.util.MessageCodeUtil;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -17,8 +19,8 @@ import java.util.UUID;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = AppECommerceApplication.class)
-class JavaMailServiceTests extends AbstractServiceTests {
+@MockBean({JavaMailSender.class, MessageCodeUtil.class})
+class JavaMailServiceTests extends AbstractTests {
 
     private static final String EMAIL = "admin@flatlogic.com";
 
@@ -28,13 +30,23 @@ class JavaMailServiceTests extends AbstractServiceTests {
     @MockBean
     private JavaMailSender javaMailSender;
 
-    @MockBean
+    @Autowired
     private MessageCodeUtil messageCodeUtil;
+
+    @TestConfiguration
+    static class TestContextConfiguration {
+
+        @Bean
+        @Autowired
+        public JavaMailService javaMailService(JavaMailSender javaMailSender, MessageCodeUtil messageCodeUtil) {
+            return new JavaMailServiceImpl(javaMailSender, messageCodeUtil);
+        }
+    }
 
     @Test
     void testSendEmailForCreateUser() {
         UUID uuid = UUID.randomUUID();
-        String resetUrl = String.format("http://localhost:3000/#/verify-email?token=%s", uuid);
+        String resetUrl = String.format("${frontend.host}/#/verify-email?token=%s", uuid);
         MimeMessage message = mock(MimeMessage.class);
 
         when(javaMailSender.createMimeMessage()).thenReturn(message);
@@ -53,7 +65,7 @@ class JavaMailServiceTests extends AbstractServiceTests {
     @Test
     void sendEmailForUpdateUserPasswordResetToken() {
         UUID uuid = UUID.randomUUID();
-        String resetUrl = String.format("http://localhost:3000/#/password-reset?token=%s", uuid);
+        String resetUrl = String.format("${frontend.host}/#/password-reset?token=%s", uuid);
         MimeMessage message = mock(MimeMessage.class);
 
         when(javaMailSender.createMimeMessage()).thenReturn(message);

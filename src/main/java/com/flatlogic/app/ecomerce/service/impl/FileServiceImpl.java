@@ -36,13 +36,6 @@ import java.util.stream.Stream;
 @Slf4j
 public class FileServiceImpl implements FileService {
 
-    private static final String UPLOAD_LOCATION = "upload";
-    private static final String FOLDER_SEPARATE = "/";
-    private static final String PRODUCT_LOCATION = UPLOAD_LOCATION + FOLDER_SEPARATE + "products";
-    private static final String USER_LOCATION = UPLOAD_LOCATION + FOLDER_SEPARATE + "users";
-    private static final String IMAGE_LOCATION = PRODUCT_LOCATION + FOLDER_SEPARATE + "image";
-    private static final String AVATAR_LOCATION = USER_LOCATION + FOLDER_SEPARATE + "avatar";
-
     private final FileRepository fileRepository;
     private final MessageCodeUtil messageCodeUtil;
 
@@ -99,7 +92,6 @@ public class FileServiceImpl implements FileService {
             throw new FileException(messageCodeUtil.getFullErrorMessageByBundleCode(
                     Constants.ERROR_MSG_FILE_DOWNLOAD_FILE, new Object[]{privateUrl}));
         }
-
     }
 
     /**
