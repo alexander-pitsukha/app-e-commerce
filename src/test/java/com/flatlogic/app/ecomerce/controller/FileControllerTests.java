@@ -53,36 +53,36 @@ class FileControllerTests extends BasicControllerTests {
 
     @Test
     void testUploadProductsFile() throws Exception {
-        MockMultipartFile file = new MockMultipartFile("file", "hello.txt",
+        MockMultipartFile mockFile = new MockMultipartFile("file", "hello.txt",
                 MediaType.TEXT_PLAIN_VALUE, "Hello, World!".getBytes());
 
         willDoNothing().given(fileService).uploadProductsFile(any(MultipartFile.class), anyString());
 
         mockMvc.perform(multipart("/file/upload/products/image")
-                        .file(file)
+                        .file(mockFile)
                         .headers(httpHeaders())
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isNoContent());
 
-        verify(fileService).uploadProductsFile(file, null);
+        verify(fileService).uploadProductsFile(mockFile, null);
     }
 
     @Test
     void testUploadUsersFile() throws Exception {
-        MockMultipartFile file = new MockMultipartFile("file", "hello.txt",
+        MockMultipartFile mockFile = new MockMultipartFile("file", "hello.txt",
                 MediaType.TEXT_PLAIN_VALUE, "Hello, World!".getBytes());
 
         willDoNothing().given(fileService).uploadUsersFile(any(MultipartFile.class), anyString());
 
         mockMvc.perform(multipart("/file/upload/users/avatar")
-                        .file(file)
+                        .file(mockFile)
                         .headers(httpHeaders())
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isNoContent());
 
-        verify(fileService).uploadUsersFile(file, null);
+        verify(fileService).uploadUsersFile(mockFile, null);
     }
 
 }

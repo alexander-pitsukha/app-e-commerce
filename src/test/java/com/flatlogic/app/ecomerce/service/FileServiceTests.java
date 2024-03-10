@@ -72,32 +72,32 @@ class FileServiceTests extends AbstractTests {
     @Test
     void testUploadProductsFile() {
         String fileName = FileService.AVATAR_LOCATION + FileService.FOLDER_SEPARATE + "test.jpeg";
-        MockMultipartFile file = new MockMultipartFile("file", "hello.txt",
+        MockMultipartFile mockFile = new MockMultipartFile("file", "hello.txt",
                 MediaType.TEXT_PLAIN_VALUE, "Hello, World!".getBytes());
 
         try (MockedStatic<FileCopyUtils> fileCopyUtilsMockedStatic = mockStatic(FileCopyUtils.class)) {
-            fileCopyUtilsMockedStatic.when(() -> FileCopyUtils.copy(file.getBytes(), new File(fileName)))
+            fileCopyUtilsMockedStatic.when(() -> FileCopyUtils.copy(mockFile.getBytes(), new File(fileName)))
                     .then(invocationOnMock -> null);
 
-            fileService.uploadUsersFile(file, "test.jpeg");
+            fileService.uploadUsersFile(mockFile, "test.jpeg");
 
-            fileCopyUtilsMockedStatic.verify(() -> FileCopyUtils.copy(file.getBytes(), new File(fileName)));
+            fileCopyUtilsMockedStatic.verify(() -> FileCopyUtils.copy(mockFile.getBytes(), new File(fileName)));
         }
     }
 
     @Test
     void testUploadUsersFile() {
         String fileName = FileService.AVATAR_LOCATION + FileService.FOLDER_SEPARATE + "test.jpeg";
-        MockMultipartFile file = new MockMultipartFile("file", "hello.txt",
+        MockMultipartFile mockFile = new MockMultipartFile("file", "hello.txt",
                 MediaType.TEXT_PLAIN_VALUE, "Hello, World!".getBytes());
 
         try (MockedStatic<FileCopyUtils> fileCopyUtilsMockedStatic = mockStatic(FileCopyUtils.class)) {
-            fileCopyUtilsMockedStatic.when(() -> FileCopyUtils.copy(file.getBytes(), new File(fileName)))
+            fileCopyUtilsMockedStatic.when(() -> FileCopyUtils.copy(mockFile.getBytes(), new File(fileName)))
                     .then(invocationOnMock -> null);
 
-            fileService.uploadUsersFile(file, "test.jpeg");
+            fileService.uploadUsersFile(mockFile, "test.jpeg");
 
-            fileCopyUtilsMockedStatic.verify(() -> FileCopyUtils.copy(file.getBytes(), new File(fileName)));
+            fileCopyUtilsMockedStatic.verify(() -> FileCopyUtils.copy(mockFile.getBytes(), new File(fileName)));
         }
     }
 
