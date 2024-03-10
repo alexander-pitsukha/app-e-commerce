@@ -49,12 +49,12 @@ class FileServiceTests extends AbstractTests {
     }
 
     @Test
-    void testDownloadFile() throws Exception {
+    void testDownloadFile() {
         String privateUrl = FileService.AVATAR_LOCATION + FileService.FOLDER_SEPARATE + "test.jpeg";
         Path mockPath = mock(Path.class);
 
         try (MockedStatic<Paths> pathsMockedStatic = mockStatic(Paths.class);
-             MockedConstruction<UrlResource> urlResourceMockedConstruction = mockConstruction(UrlResource.class,
+             MockedConstruction<UrlResource> ignored = mockConstruction(UrlResource.class,
                      (mock, context) -> when(mock.exists()).thenReturn(true))) {
 
             pathsMockedStatic.when(() -> Paths.get(FileService.UPLOAD_LOCATION)).thenReturn(mockPath);
