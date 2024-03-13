@@ -55,8 +55,8 @@ public class FileController {
     /**
      * Upload products file.
      *
-     * @param multipartRequest   MultipartRequest
-     * @param result BindingResult
+     * @param multipartRequest MultipartRequest
+     * @param result           BindingResult
      * @return Void
      */
     @Operation(summary = "Upload products file", description = "Provides uploading products file")
@@ -79,8 +79,8 @@ public class FileController {
     /**
      * Upload users file.
      *
-     * @param multipartRequest   MultipartRequest
-     * @param result BindingResult
+     * @param multipartRequest MultipartRequest
+     * @param result           BindingResult
      * @return Void
      */
     @Operation(summary = "Upload users file", description = "Provides uploading users file")
