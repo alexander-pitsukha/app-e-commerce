@@ -1,7 +1,6 @@
 INSERT INTO public.users
     (id,"createdAt","deletedAt","updatedAt",disabled,email,"emailVerificationToken","emailVerificationTokenExpiresAt","emailVerified","firstName","importHash","lastName","password","passwordResetToken","passwordResetTokenExpiresAt","phoneNumber",provider,"role","createdById","updatedById")
 VALUES
-    ('52bc1fb6-0fe5-4647-8cbc-8c55e156b889','2020-11-17 14:32:23.553',NULL,'2020-11-17 14:32:23.553',false,'admin@flatlogic.com',NULL,NULL,true,'Admin',NULL,NULL,'$2b$12$Dtk2u7HCtJydGeljMR5tEeKmVxrO8W0FNoSDXSSBoJHrNU3i9R4ca',NULL,NULL,NULL,'local','ADMIN',NULL,NULL),
     ('127b7b84-5af0-4e66-93ca-346ac35e1bdd','2020-12-10 17:33:50.152',NULL,NULL,false,'user@flatlogic.com',NULL,NULL,false,'Alex',NULL,'Xela',NULL,NULL,NULL,'+888888888888',NULL,'USER','52bc1fb6-0fe5-4647-8cbc-8c55e156b889',NULL);
 
 INSERT INTO public.categories

@@ -14,6 +14,7 @@ How to create database schema, import data in all tables and run a local app, ru
 
 * mvn clean compile -U -Pdev
 * mvn -Pdev jpa-schema:generate
+* mvn -Pdev sql:execute
 * mvn -Pdev sql:execute@import-data
 * mvn spring-boot:run
 
